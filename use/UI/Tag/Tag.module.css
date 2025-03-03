@@ -1,0 +1,47 @@
+.tag {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 5px;
+  border-radius: 15px;
+
+  color: var(--black);
+  background-color: transparent;
+  border: none;
+}
+.s {
+  padding: 7px 16px;
+  font-size: 14px;
+  line-height: 14px;
+}
+.m {
+  padding: 7px 16px;
+  font-size: 16px;
+  line-height: 16px;
+}
+.red {
+  color: var(--white);
+  background-color: rgb(235, 51, 51);
+  font-weight: bold;
+}
+.gray {
+  color: var(--white);
+  background-color: gray;
+  font-weight: bold;
+}
+.green {
+  color: var(--white);
+  background-color: rgb(21, 199, 21);
+  font-weight: bold;
+}
+.primary {
+  color: var(--primary);
+  border: 1px var(--primary) solid;
+  background-color: none;
+  font-weight: bold;
+}
+.ghost {
+  color: var(--black);
+  background-color: transparent;
+  border: 1px var(--gray-light) solid;
+  font-weight: bold;
+}

@@ -2,7 +2,10 @@
   padding: 10px;
   font-size: 20px;
   border-radius: 5px;
-  display: inline-block;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   box-sizing: border-box;
   text-align: center;
@@ -24,4 +27,11 @@
 .ghost:hover {
   color: var(--white);
   background-color: var(--primary);
+}
+.icn {
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+.down {
+  transform: rotate(90deg);
 }

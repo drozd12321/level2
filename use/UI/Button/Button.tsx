@@ -1,8 +1,7 @@
-import React, {
-  ButtonHTMLAttributes,
-  DetailedHTMLProps,
-  DetailsHTMLAttributes,
-} from "react";
+"useClient";
+import React, { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+import { GoArrowRight } from "react-icons/go";
+import { GoArrowDown } from "react-icons/go";
 import styles from "./Button.module.css";
 interface ButtonProps
   extends DetailedHTMLProps<
@@ -11,9 +10,16 @@ interface ButtonProps
   > {
   children: React.ReactNode;
   appireans: "primary" | "ghost";
+  arrow?: "right" | "down" | "none";
 }
 
-const Button = ({ appireans, children, className, ...props }: ButtonProps) => {
+const Button = ({
+  appireans,
+  arrow = "none",
+  children,
+  className,
+  ...props
+}: ButtonProps) => {
   return (
     <button
       className={`${styles.btn} ${className} ${
@@ -22,6 +28,15 @@ const Button = ({ appireans, children, className, ...props }: ButtonProps) => {
       {...props}
     >
       {children}
+      {arrow != "none" ? (
+        <span
+          className={`${styles.icn} ${arrow === "down" ? styles.down : ""}`}
+        >
+          <GoArrowRight />
+        </span>
+      ) : (
+        ""
+      )}
     </button>
   );
 };

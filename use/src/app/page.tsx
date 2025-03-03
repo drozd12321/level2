@@ -1,6 +1,7 @@
 import Button from "../../UI/Button/Button";
 import { Htag } from "../../UI/Htag/Htag";
 import Ptags from "../../UI/Ptags/Ptags";
+import Rating from "../../UI/Rating/Rating";
 import Tag from "../../UI/Tag/Tag";
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <Tag size="m" color="ghost">
         FFFF
       </Tag>
+      <Rating />
     </main>
   );
 }

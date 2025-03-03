@@ -4,9 +4,11 @@
 
 :root {
   --background: #ffffff;
+  --gray-light: #c9c5c5;
   --black: #3b434e;
   --white: white;
   --primary: #7653fc;
+  --primary-hover: #5634df;
   --red: #d31111;
   --green: #1dc37e;
   --green-light: #c8f8e4;

@@ -1,0 +1,27 @@
+.btn {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  border: none;
+  transition: all 0.4s ease;
+}
+.primary {
+  color: var(--white);
+  background-color: var(--primary);
+}
+.ghost {
+  color: var(--black);
+  background-color: none;
+  border: 1px var(--gray-light) solid;
+}
+.primary:hover {
+  background-color: var(--primary-hover);
+}
+.ghost:hover {
+  color: var(--white);
+  background-color: var(--primary);
+}

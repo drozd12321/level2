@@ -1,9 +1,12 @@
-import Button from "../../UI/Button/Button";
-import { Htag } from "../../UI/Htag/Htag";
-import Ptags from "../../UI/Ptags/Ptags";
-import Rating from "../../UI/Rating/Rating";
-import Tag from "../../UI/Tag/Tag";
+"use client";
+import { useState } from "react";
+import Button from "./components/UI/Button/Button";
+import { Htag } from "./components/UI/Htag/Htag";
+import Ptags from "./components/UI/Ptags/Ptags";
+import Rating from "./components/UI/Rating/Rating";
+import Tag from "./components/UI/Tag/Tag";
 export default function Home() {
+  const [rating, setRat] = useState<number>(4);
   return (
     <main>
       <div className="flex gap-3">
@@ -32,7 +35,7 @@ export default function Home() {
       <Tag size="m" color="ghost">
         FFFF
       </Tag>
-      <Rating />
+      <Rating rating={rating} isEdit={true} setRating={setRat} />
     </main>
   );
 }

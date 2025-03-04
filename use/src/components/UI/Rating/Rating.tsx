@@ -39,9 +39,9 @@ const Rating = ({
               onMouseLeave={() => changeDisplay(rating)}
               onClick={() => changeRating(ind + 1)}
               tabIndex={isEdit ? 0 : -1}
-              onKeyDown={(e: KeyboardEvent<SVGElement>) => {
-                console.log(e.key);
-              }}
+              onKeyDown={(e: KeyboardEvent<SVGElement>) =>
+                isEdit && handleSpace(ind + 1, e)
+              }
             />
           ) : (
             <FiStar
@@ -50,6 +50,9 @@ const Rating = ({
               onMouseLeave={() => changeDisplay(rating)}
               onClick={() => changeRating(ind + 1)}
               tabIndex={isEdit ? 0 : -1}
+              onKeyDown={(e: KeyboardEvent<SVGElement>) =>
+                isEdit && handleSpace(ind + 1, e)
+              }
             />
           )}
         </div>
@@ -72,7 +75,12 @@ const Rating = ({
     }
     setRating(i);
   };
-
+  const handleSpace = (i: number, e: KeyboardEvent<SVGElement>) => {
+    if (e.code != "Space" || !setRating) {
+      return;
+    }
+    setRating(i);
+  };
   return (
     <div {...props} className={styles.dv}>
       {ratingArray.map((r, i) => (

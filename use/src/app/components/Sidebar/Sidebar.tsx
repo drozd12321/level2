@@ -1,7 +1,9 @@
-import React from "react";
+import React, { DetailedHTMLProps, HTMLAttributes } from "react";
 import styles from "./Sidebar.module.css";
-const Sidebar = () => {
-  return <div>Sidebar</div>;
+interface SidebarProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+const Sidebar = ({ ...props }: SidebarProps) => {
+  return <div {...props}>Sidebar</div>;
 };
 
 export default Sidebar;

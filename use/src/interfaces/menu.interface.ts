@@ -1,0 +1,12 @@
+export interface PadeItem {
+  alias: string;
+  title: string;
+  _id: string;
+  category: string;
+}
+export interface MenuItem {
+  _id: {
+    secondCategory: number;
+  };
+  pages: PadeItem[];
+}

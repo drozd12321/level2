@@ -1,19 +1,15 @@
-// "use client";
-//import { DetailedHTMLProps, HTMLAttributes, useState } from "react";
+"use server";
 import Button from "../components/UI/Button/Button";
 import { Htag } from "../components/UI/Htag/Htag";
 import Ptags from "../components/UI/Ptags/Ptags";
 import Rating from "../components/UI/Rating/Rating";
 import Tag from "../components/UI/Tag/Tag";
 import Link from "next/link";
-import axios from "axios";
-import { GetStaticProps } from "next";
-import { MenuItem } from "@/interfaces/menu.interface";
 export default async function Home() {
-  const firstCategory = 0;
   const menu = await fetch(`https://0397679a0e5a86d4.mokky.dev/item`);
-  // const [rating, setRat] = useState<number>(4);
+
   const resp = await menu.json();
+  console.log(resp);
   return (
     <main>
       <Htag tag="h1">DROZD</Htag>
@@ -40,12 +36,8 @@ export default async function Home() {
       <Tag size="m" color="ghost">
         FFFF
       </Tag>
-      <Rating rating={4} isEdit={true} setRating={() => {}} />
+      <Rating rating={4} isEdit={true} />
+      {JSON.stringify(resp)}
     </main>
   );
-}
-
-interface HomeProps {
-  menu: MenuItem[];
-  firstCategory: number;
 }

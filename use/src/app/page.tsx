@@ -4,19 +4,14 @@ import Ptags from "../components/UI/Ptags/Ptags";
 import Rating from "../components/UI/Rating/Rating";
 import Tag from "../components/UI/Tag/Tag";
 import Link from "next/link";
-import { API } from "./api";
-async function getMenu(): Promise<Post[]> {
+import { dataGt } from "./api/api";
+import { MenuItem } from "@/interfaces/menu.interface";
+
+async function getMenu(): Promise<MenuItem[]> {
   try {
-    const contr = new AbortController();
-    const tm = setTimeout(() => contr.abort(), 50000);
-    const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    const res = await fetch(dataGt.topPages.find, {
       method: "GET",
-      signal: contr.signal,
     });
-    clearTimeout(tm);
-    if (!res.ok) {
-      throw new Error(`dsf:${res.status}`);
-    }
     return await res.json();
   } catch (error) {
     console.error(error);
@@ -24,7 +19,7 @@ async function getMenu(): Promise<Post[]> {
   }
 }
 export default async function Home() {
-  const menu = getMenu();
+  const menu = await getMenu();
   console.log(menu);
   return (
     <main>
@@ -53,6 +48,9 @@ export default async function Home() {
         FFFF
       </Tag>
       <Rating rating={4} isEdit={true} />
+      {menu.map((men) => (
+        <li key={men._id.secondCategory}>{men._id.secondCategory}</li>
+      ))}
     </main>
   );
 }

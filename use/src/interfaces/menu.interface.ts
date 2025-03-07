@@ -6,7 +6,7 @@ export interface PadeItem {
 }
 export interface MenuItem {
   _id: {
-    secondCategory: number;
+    secondCategory: string;
   };
   pages: PadeItem[];
 }

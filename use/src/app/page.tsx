@@ -1,15 +1,31 @@
-"use server";
 import Button from "../components/UI/Button/Button";
 import { Htag } from "../components/UI/Htag/Htag";
 import Ptags from "../components/UI/Ptags/Ptags";
 import Rating from "../components/UI/Rating/Rating";
 import Tag from "../components/UI/Tag/Tag";
 import Link from "next/link";
+import { API } from "./api";
+async function getMenu(): Promise<Post[]> {
+  try {
+    const contr = new AbortController();
+    const tm = setTimeout(() => contr.abort(), 50000);
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "GET",
+      signal: contr.signal,
+    });
+    clearTimeout(tm);
+    if (!res.ok) {
+      throw new Error(`dsf:${res.status}`);
+    }
+    return await res.json();
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+}
 export default async function Home() {
-  const menu = await fetch(`https://0397679a0e5a86d4.mokky.dev/item`);
-
-  const resp = await menu.json();
-  console.log(resp);
+  const menu = getMenu();
+  console.log(menu);
   return (
     <main>
       <Htag tag="h1">DROZD</Htag>
@@ -37,7 +53,6 @@ export default async function Home() {
         FFFF
       </Tag>
       <Rating rating={4} isEdit={true} />
-      {JSON.stringify(resp)}
     </main>
   );
 }

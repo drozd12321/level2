@@ -72,14 +72,17 @@ const Menu = () => {
     <div>
       {load && (
         <MenuAccordion>
-          {men.map((item) => (
+          {men.map((item, i) => (
             <MenuAccordion.Group title={item.name} key={item.id}>
-              {menuItems.map((menuItem) => (
-                <MenuAccordion.Item
-                  title={menuItem._id.secondCategory}
-                  key={menuItem._id.secondCategory}
-                />
-              ))}
+              {menuItems.map(
+                (menuItem) =>
+                  i === 0 && (
+                    <MenuAccordion.Item
+                      title={menuItem._id.secondCategory}
+                      key={menuItem._id.secondCategory}
+                    />
+                  )
+              )}
             </MenuAccordion.Group>
           ))}
         </MenuAccordion>

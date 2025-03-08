@@ -6,7 +6,11 @@ export default async function getMenu(): Promise<MenuItem[]> {
     const res = await fetch(dataGt.topPages.find, {
       method: "GET",
     });
-    return await res.json();
+    const data = await res.json();
+    const menuItemsWithGroupId: MenuItem[] = data.map((item: MenuItem) => ({
+      ...item,
+    }));
+    return menuItemsWithGroupId;
   } catch (error) {
     console.error(error);
     return [];

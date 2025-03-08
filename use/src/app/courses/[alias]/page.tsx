@@ -1,5 +1,6 @@
 import { getAlias } from "@/data/getAlias";
 import getMenu from "@/data/getMenu";
+import { notFound } from "next/navigation";
 import React from "react";
 interface Params {
   alias: string;
@@ -14,6 +15,9 @@ export async function generateStaticParams() {
 const page = async ({ params }: { params: Promise<Params> }) => {
   const { alias } = await params;
   const al = await getAlias(alias);
+  if (!al) {
+    return notFound();
+  }
   return (
     <div>
       <div>{alias}</div>

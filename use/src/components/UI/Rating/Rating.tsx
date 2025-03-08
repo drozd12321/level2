@@ -21,7 +21,6 @@ const Rating = ({
   rating = 0,
   isEdit = false,
   setRating,
-  className,
   ...props
 }: RatingProps) => {
   const [ratingArray, setRatingArray] = useState<JSX.Element[]>(

@@ -1,7 +1,9 @@
 import React, { DetailedHTMLProps, HTMLAttributes } from "react";
-import styles from "./Sidebar.module.css";
+
 interface SidebarProps
-  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  et?: string;
+}
 const Sidebar = ({ ...props }: SidebarProps) => {
   return <div {...props}>Sidebar</div>;
 };

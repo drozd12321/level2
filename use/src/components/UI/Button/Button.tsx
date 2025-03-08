@@ -1,7 +1,6 @@
 "useClient";
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 import { GoArrowRight } from "react-icons/go";
-import { GoArrowDown } from "react-icons/go";
 import styles from "./Button.module.css";
 interface ButtonProps
   extends DetailedHTMLProps<

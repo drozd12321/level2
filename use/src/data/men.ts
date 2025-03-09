@@ -6,19 +6,19 @@ import { GrServices } from "react-icons/gr";
 import { LiaProductHunt } from "react-icons/lia";
 export const men: Men[] = [
   {
-    route: "courses/courses",
+    route: "courses",
     icon: GrAccessibility,
     id: TopLevelCategory.Coureses,
     name: "Курсы",
   },
   {
-    route: "courses//services",
+    route: "services",
     icon: GrServices,
     id: TopLevelCategory.Services,
-    name: "Книги",
+    name: "Сервисы",
   },
   {
-    route: "courses//books",
+    route: "books",
     icon: IoBookSharp,
     id: TopLevelCategory.Books,
     name: "Книги",

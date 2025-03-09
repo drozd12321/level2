@@ -15,6 +15,9 @@
 }
 .sidebar {
   grid-area: sidebar;
+  display: grid;
+  align-content: start;
+  margin-top: 20px;
 }
 .body {
   grid-area: body;

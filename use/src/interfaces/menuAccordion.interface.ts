@@ -6,6 +6,7 @@ export interface MenuAccordionProps {
 export interface MenuGroupProps {
   children: ReactNode;
   title: string;
+  link: string;
 }
 export interface MenuItemProps {
   children: ReactNode;
@@ -16,7 +17,9 @@ export interface MenuThirdLevelProps {
 }
 export interface Cnt {
   activSecond: string | undefined;
+  activThird: string | undefined;
   activeGroup: string | undefined;
   switchGroup: (value: string | undefined) => void;
   switchGroupSecond: (value: string | undefined) => void;
+  switchGroupThird: (value: string | undefined) => void;
 }

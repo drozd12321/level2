@@ -23,7 +23,7 @@ const Footer = ({ className, ...props }: FooterProps) => {
           Пользовательское соглашение
         </a>
       </div>
-      <div>
+      <div className="mr-8">
         <a
           href="#"
           target="_blank"

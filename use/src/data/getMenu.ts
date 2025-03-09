@@ -5,6 +5,7 @@ export default async function getMenu(): Promise<MenuItem[]> {
   try {
     const res = await fetch(dataGt.topPages.find, {
       method: "GET",
+      next: { revalidate: 10 },
     });
     const data = await res.json();
     const menuItemsWithGroupId: MenuItem[] = data.map((item: MenuItem) => ({

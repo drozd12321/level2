@@ -3,7 +3,6 @@ import { TopPageModal } from "@/interfaces/page.interface";
 
 export async function getAlias(alias: string): Promise<TopPageModal | null> {
   try {
-    console.log(alias);
     const res = await fetch(dataGt.topPages.alias, {
       method: "GET",
     });

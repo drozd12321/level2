@@ -29,7 +29,11 @@ export default function RootLayout({
         <div className={styles.wrapper}>
           <Header className={styles.header} />
           <Sidebar className={styles.sidebar} />
-          <div className={styles.body}>{children}</div>
+          <div
+            className={`${styles.body} h-[calc(100vh-70px)] overflow-y-auto`}
+          >
+            {children}
+          </div>
           <Footer className={styles.footer} />
         </div>
       </body>

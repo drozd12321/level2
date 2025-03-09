@@ -1,5 +1,6 @@
 import React, { DetailedHTMLProps, HTMLAttributes } from "react";
 import Menu from "../Menu/Menu";
+import getMenu from "@/data/getMenu";
 // import styles from "./Sidebar.module.css";
 
 interface SidebarProps
@@ -7,10 +8,11 @@ interface SidebarProps
   et?: string;
 }
 
-const Sidebar = ({ ...props }: SidebarProps) => {
+const Sidebar = async ({ ...props }: SidebarProps) => {
+  const menu = await getMenu();
   return (
     <div {...props}>
-      <Menu />
+      <Menu menuIt={menu} />
     </div>
   );
 };

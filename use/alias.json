@@ -69,7 +69,7 @@
   },
   {
     "tags": ["Python", "Programming", "Advanced"],
-    "_id": "course-2",
+    "_id": "course-3",
     "secondCategory": "Программирование",
     "alias": "java-oop",
     "title": "Продвинутый Python",
@@ -103,7 +103,7 @@
   },
   {
     "tags": ["Digital Marketing", "Marketing"],
-    "_id": "course-3",
+    "_id": "course-4",
     "secondCategory": "Маркетинг",
     "alias": "digital-marketing",
     "title": "Цифровой Маркетинг",
@@ -137,7 +137,7 @@
   },
   {
     "tags": ["Digital Marketing", "Marketing"],
-    "_id": "course-3",
+    "_id": "course-5",
     "secondCategory": "Маркетинг",
     "alias": "seo-strategies",
     "title": "Цифровой Маркетинг",
@@ -171,7 +171,7 @@
   },
   {
     "tags": ["Digital Marketing", "Marketing"],
-    "_id": "course-3",
+    "_id": "course-6",
     "secondCategory": "Маркетинг",
     "alias": "content-marketing",
     "title": "Цифровой Маркетинг",
@@ -205,7 +205,7 @@
   },
   {
     "tags": ["Graphic Design", "Design", "Basics"],
-    "_id": "course-4",
+    "_id": "course-7",
     "secondCategory": "Дизайн",
     "alias": "graphic-design-basics",
     "title": "Основы Графического Дизайна",
@@ -239,7 +239,7 @@
   },
   {
     "tags": ["UI Design", "Design"],
-    "_id": "course-5",
+    "_id": "course-8",
     "secondCategory": "Дизайн",
     "alias": "ui-design-principles",
     "title": "Принципы UI Дизайна",
@@ -273,7 +273,7 @@
   },
   {
     "tags": ["UI Design", "Design"],
-    "_id": "course-5",
+    "_id": "course-9",
     "secondCategory": "Дизайн",
     "alias": "motion-design",
     "title": "Принципы UI Дизайна",

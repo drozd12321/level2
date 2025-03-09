@@ -1,3 +1,4 @@
+import AliasComponents from "@/app/components/AliasComponent/AliasComponents";
 import { getAlias } from "@/data/getAlias";
 import getMenu from "@/data/getMenu";
 import { notFound } from "next/navigation";
@@ -25,8 +26,7 @@ const pageproduct = async ({ params }: { params: Promise<Params> }) => {
   }
   return (
     <div>
-      <div>{alias}</div>
-      <div>{JSON.stringify(al)}</div>
+      <AliasComponents al={al} alias={alias} type={type} />
     </div>
   );
 };

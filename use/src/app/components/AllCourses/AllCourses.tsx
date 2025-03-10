@@ -10,11 +10,12 @@ const AllCourses = ({ products }: { products: ProductModel[] }) => {
   return (
     <div className="mr-2">
       <h1>AllCourses</h1>
-      <div className="w-full grid gap-2.5 grid-cols-[1fr_1fr]">
+      <div className="w-full grid gap-7 grid-cols-[1fr_1fr]">
         {products.map((cours) => (
           <div
             key={cours._id}
-            className="shadow-lg border border-2 border-solid border-[--primary] rounded-md p-5"
+            className="transition-all ease-linear shadow-lg border border-2 border-solid border-[--primary] rounded-md p-5
+            hover:translate-y-5"
           >
             <div
               className="grid grid-rows-[auto_auto_auto_auto_auto] gap-2

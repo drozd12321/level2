@@ -12,7 +12,7 @@ const Footer = ({ className, ...props }: FooterProps) => {
       text-base leading-5 ${className} `}
     >
       <div>
-        Lorem ipsum dolor {format(new Date(), "dd.mm.yyyy")} sit amet consectetu
+        Lorem ipsum dolor {format(new Date(), "yyyy")} sit amet consectetu
       </div>
       <div>
         <a

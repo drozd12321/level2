@@ -8,7 +8,7 @@ export interface PadeItem {
   category: string;
 }
 export interface MenuItem {
-  group: number;
+  group?: number;
   _id: {
     secondCategory: string;
   };

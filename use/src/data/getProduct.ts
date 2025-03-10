@@ -1,12 +1,27 @@
 import { dataGt } from "@/app/api/api";
-import { MenuItem } from "@/interfaces/menu.interface";
+import { ProductModel } from "@/interfaces/product.interface";
 
-export async function getProducts(): Promise<MenuItem[]> {
+export async function getProducts(type: string): Promise<ProductModel[]> {
   try {
-    const res = await fetch(dataGt.topPages.products, {
+    let url = "";
+    switch (type) {
+      case "courses":
+        url = dataGt.topPages.products;
+        break;
+      case "services":
+        url = dataGt.topPages.products;
+        break;
+      case "books":
+        url = dataGt.topPages.products;
+        break;
+      case "products":
+        url = dataGt.topPages.products;
+        break;
+    }
+    const res = await fetch(url, {
       method: "GET",
     });
-    return await res.json();
+    return res.json();
   } catch (error) {
     console.error(error);
     return [];

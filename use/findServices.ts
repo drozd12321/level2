@@ -1,4 +1,4 @@
-[
+export const findServ = [
   {
     _id: { secondCategory: "Разработка" },
     pages: [
